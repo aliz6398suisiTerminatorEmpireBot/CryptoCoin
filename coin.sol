@@ -45,7 +45,13 @@ contract coin{
     function balance() external view returns(uint256){
         return _balances[msg.sender];
     }
+    function balances() external view returns(uint256){
+        return _balances[msg.sender];
+    }
     function balanceOf(address addr) external view returns(uint256){
+        return _balances[addr];
+    }
+    function balancesOf(address addr) external view returns(uint256){
         return _balances[addr];
     }
     function transfer(address _to,uint256 _value) external {
